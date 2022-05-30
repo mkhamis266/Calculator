@@ -19,4 +19,8 @@ export class AppComponent {
   clrear() {
     this.result = ''
   }
+
+  equal(){
+    this.result = eval(this.result)
+  }
 }
