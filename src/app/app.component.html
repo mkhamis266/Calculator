@@ -1,10 +1,10 @@
 <div class="calculator-grid">
   <div class="output">
     <div data-previous-operand class="previous-operand"></div>
-    <div data-current-operand class="current-operand"></div>
+    <div data-current-operand class="current-operand">{{result}}</div>
   </div>
-  <button data-all-clear class="span-two">AC</button>
-  <button
+  <button (click)="clrear()" data-all-clear class="span-two">AC</button>
+  <button (click)="getAction(item)"
     *ngFor="let item of ['DEL','÷',1,2,3,'*',4,5,6,'+',7,8,9,'-','.',0]">{{item}}</button>
   <button data-equals class="span-two">=</button>
 </div>

@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Calculator';
+  result = '';
+
+  getAction(item:string|number) {
+    if (item ==="DEL"){
+      this.result = this.result.slice(0,-1);
+      return;
+    }
+    this.result += item; 
+  }
+
+  clrear() {
+    this.result = ''
+  }
 }
